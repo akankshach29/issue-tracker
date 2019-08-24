@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="main.css" rel="stylesheet">
+    <title>Issue Tracker</title>
+</head>
+<body onload="fetchIssues()">
+    <div style="padding: 20px;">
+        <h1>Issue Tracker</h1>
+        <div class="jumbotron">
+            <h2>Add New Issue</h2>
+            <form id="inputform">
+                <div class="element">
+                    <label for="description">Description</label><br />
+                    <input id="descid" type="text" placeholder="Describe the issue..." />
+                </div>
+                <div class="element">
+                    <label for="severity">Severity</label><br />
+                    <select id="severityselect">
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                </div>
+                <div class="element">
+                    <label for="assigned">Assigned To</label><br />
+                    <input id="assignid" type="text" placeholder="Enter responsible" />
+                </div>
+                <div class="element">
+                    <button class="btn-style" type="submit">Add</button>
+                </div>
+            </form>
+        </div>
+        <div class="well">
+            <div id="issues"></div>
+        </div>
+    </div>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://chancejs.com/chance.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
