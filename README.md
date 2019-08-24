@@ -1,1 +1,1 @@
-# issue-tracker
+# issue-tracker app in vanilla js
